@@ -28,6 +28,34 @@ This structure separates UI interactions from test logic, making the framework e
 
 ---
 
+# Test Cases 🧪
+
+The following test cases cover the critical scenarios for the Flip for Business registration flow.
+
+| TC ID | Test Case | Expected Result | Priority |
+|---|---|---|---|
+| REG-001 | Register Business Perseorangan with valid data | Registration is successful and Email Verification page is displayed | Critical |
+| REG-002 | Register Business Badan Usaha with valid data | Registration is successful and Email Verification page is displayed | Critical |
+| REG-003 | Register with invalid password | Password validation message is displayed and registration cannot proceed | Critical |
+| REG-004 | Register with invalid email format | "Format email salah" is displayed and registration cannot proceed | Critical |
+| REG-005 | Register Badan Usaha without Business Name | Business Name validation is displayed and registration cannot proceed | High |
+| REG-006 | Register Perseorangan with registered email | Registration is rejected and duplicate email validation is displayed | Critical |
+
+## Automation Coverage
+
+All test cases listed above are automated using Playwright.
+
+| TC ID | Automation Status |
+|---|---|
+| REG-001 | ✅ Automated |
+| REG-002 | ✅ Automated |
+| REG-003 | ✅ Automated |
+| REG-004 | ✅ Automated |
+| REG-005 | ✅ Automated |
+| REG-006 | ✅ Automated |
+
+---
+
 # Setup Instructions 🛠️
 
 ### Prerequisites
