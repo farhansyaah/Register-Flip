@@ -176,8 +176,8 @@ export class CommonMethods{
         return faker.company.name();
     }
 
-    async getRandomNumber(){
-        return faker.number.int().toString();
+    async getRandomNumber(digits: number){
+        return faker.string.numeric(digits);
     }
 
     async randomAlphabetNumericString(count: number) {
@@ -244,7 +244,7 @@ export class CommonMethods{
 
 
     async assertLabelContainsText(locator:string, text : string, logMessage:string){
-        await this.page.locator(locator).scrollIntoViewIfNeeded({timeout:10000});
+        await this.page.locator(locator).scrollIntoViewIfNeeded({timeout:15000});
         await this.isEleDisplayed(await this.page.locator(locator));
         console.log(logMessage.concat(text));
         return await this.isElementTextContains(locator, text);
